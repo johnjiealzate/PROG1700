@@ -6,7 +6,7 @@
 #Programming Language: Python
 #Licence: Creative Commons
 #Date:09-27-23
-#Version: 1.01
+#Version: 1
 
 #Represents the age as "x" variable
 x = input("Please enter your age: ")
