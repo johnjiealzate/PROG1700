@@ -2,7 +2,7 @@
 #Student ID: W0474627
 #Course: PROG1700
 #Project: Simple_Algorithm
-#Repository: https://github.com/johnjiealzate/NSCC_ITGE_PROG1700/blob/main/W0474627_PROG1700_Simple_Algorithm_PY5.py
+#Repository: https://github.com/johnjiealzate/PROG1700/blob/main/W0474627_PROG1700_Simple_Algorithm_PY5.py
 #Programming Language: Python
 #Licence: Creative Commons
 #Date:09-27-23
