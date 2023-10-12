@@ -12,7 +12,7 @@ invalid_attempts = 10
 
 
 # program control for guessing game
-while guess_attempts < 10:
+while invalid_attempts > 0:
     """ Main Program """
     user_input = input("What is your guess, 1-10?")
     # validate the input to ensure the program does not return invalid value
@@ -20,9 +20,7 @@ while guess_attempts < 10:
     if user_input.isdigit():
         # cast the input to an integer
         user_input = int(user_input)
-        # calculate the  computer value
-        print(computer_input)
-        # print computer value
+        #return true if a digit is between 1 to 10
         if user_input <= 10:
             if user_input != computer_input:
                 if user_input > computer_input:
@@ -30,18 +28,18 @@ while guess_attempts < 10:
                 if user_input < computer_input:
                     print ("Your guess is too low.")
             else:
-                guess_attempts += 1
-                loop_counter += 1
-                print ("You guessed the number in", loop_counter, "tries.")
+                guess_attempts = guess_attempts = 1
+                print ("You guessed the number in", guess_attempts, "tries.")
                 break
+        # return false if value is more than 10
         else:
             print("Please enter a valid number.")
             invalid_attempts = invalid_attempts -1
             print ("You have", invalid_attempts, "attempts")
+    # return false if value in not a number
     else:
         print("Please enter a valid number.")
         invalid_attempts = invalid_attempts -1
         print ("You have", invalid_attempts, "attempts")
 else:
     print ("You are not playing fairly.... Bye!!!")
-
