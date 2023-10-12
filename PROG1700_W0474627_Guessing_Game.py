@@ -1,15 +1,13 @@
 # import modules
 import random
 
-# declare global variable
+# declare global variables
 upper_limit = 10
 lower_limit = 1
 range_number = range(lower_limit, upper_limit)
 computer_input = random.choice(range_number)
-loop_counter = 0
 guess_attempts = 0
 invalid_attempts = 10
-
 
 # program control for guessing game
 while invalid_attempts > 0:
@@ -28,7 +26,8 @@ while invalid_attempts > 0:
                 if user_input < computer_input:
                     print ("Your guess is too low.")
             else:
-                guess_attempts = guess_attempts = 1
+                print ("you're right!")
+                guess_attempts = guess_attempts + 1
                 print ("You guessed the number in", guess_attempts, "tries.")
                 break
         # return false if value is more than 10
@@ -42,4 +41,4 @@ while invalid_attempts > 0:
         invalid_attempts = invalid_attempts -1
         print ("You have", invalid_attempts, "attempts")
 else:
-    print ("You are not playing fairly.... Bye!!!")
+    print ("I'm tired. You repeatedly entered a wong input!")
