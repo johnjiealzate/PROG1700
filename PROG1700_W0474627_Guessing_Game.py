@@ -6,12 +6,14 @@ upper_limit = 10
 lower_limit = 1
 range_number = range(lower_limit, upper_limit)
 computer_input = random.choice(range_number)
-guess_attempts = 0
+guess_attempts = 5
 invalid_attempts = 10
 
 # program control for guessing game
-while invalid_attempts > 0:
+while guess_attempts > 0:
     """ Main Program """
+    name = input ("Hello, what's your name?")
+    print ("Hi", name, ", this is a guessing game. I will guess a number from 1 to 10, and you will attempt to guess my number. You have 5 attempts to guess my number to win")
     user_input = input("What is your guess, 1-10?")
     # validate the input to ensure the program does not return invalid value
     # return true if a digit is entered, otherwise return if false.
