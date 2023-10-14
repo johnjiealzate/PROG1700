@@ -9,6 +9,8 @@ computer_input = random.choice(range_number)
 guess_attempts = 1
 invalid_input_attempts = 5
 tries_remaining = 5
+
+# start of the game
 name = input ("Hello, what's your name?")
 print ("Hi", name, ", this is a guessing game. You will guess a number from 1 to 10, and you will attempt to guess my number. You have 5 attempts to guess my number to win.")
 
