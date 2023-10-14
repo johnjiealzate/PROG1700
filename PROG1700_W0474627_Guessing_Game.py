@@ -57,4 +57,4 @@ while invalid_input_attempts > 0:
         print ("You have", invalid_input_attempts, "attempts left.")
 #return false if the player repeatedly entered wrong input type
 else:
-    print ("I'm tired. You repeatedly entered a wong input!")
+    print ("I'm tired. You repeatedly entered a wrong input!")
