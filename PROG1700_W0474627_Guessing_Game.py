@@ -32,7 +32,7 @@ while invalid_input_attempts > 0:
                     print ("Your guess is too low.")
                 guess_attempts = guess_attempts +1
                 tries_remaining = tries_remaining -1
-                # return true if with valid number of tries
+                # return true with valid number of tries
                 while tries_remaining != 0:
                     print ("You have", tries_remaining, "tries left.")
                     break
