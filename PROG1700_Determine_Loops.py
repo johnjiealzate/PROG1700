@@ -73,3 +73,8 @@ for i in range(0, 11):
     print("Outer Loop Iteration #", i)
     for a in range(10, -1, -1):
         print("Inner Loop Iteration #", a)
+
+film_name = input("Please eneter your favorite film:")
+film =film_name.strip()
+for i in range (0, len(film), 0):
+    print (film[i])
