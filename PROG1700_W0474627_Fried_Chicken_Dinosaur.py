@@ -5,7 +5,7 @@ days_counter2 = 7
 chicken_eaten_daily = 0
 chicken_eaten_when_ill = 0
 increase_in_eaten_chicken = 1
-remaining_chicken = 19
+remaining_chicken = chicken_in_box - 1
 eats_when_ill = 0
 
 # Main program control
