@@ -29,14 +29,12 @@ while chicken_in_box > 0:
                 print ("Fried chicken eaten on day", round(days_counter2, 2), "=", round(increase_in_eaten_chicken, 2))
                 print ("Fried chicken remaining: =", round((remaining_chicken - chicken_eaten_when_ill), 2))
                 if remaining_chicken <= 0:
-                    print (chicken_in_box == 0)
                     print("The number of days it took to run out of chicken is", days_counter2, "days.")
-                    break
-       
+                    
+                    break      
                 days_counter2 += 1
                 increase_in_eaten_chicken += 0.05
                 remaining_chicken -= 1.05
-                chicken_in_box == 0
               
         break
     days_counter1 += 1
