@@ -47,3 +47,7 @@ pen.hideturtle()
 pen.goto(0,260)
 pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", 
           font=("Courier", 24, "normal"))
+
+# Main
+while True:
+    wn.update()
