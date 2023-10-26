@@ -39,8 +39,8 @@ ball.penup()
 ball.goto(0,0)
 
 # Define the ball movement
-ball.dx = 0.05
-ball.dy = 0.05
+ball.dx = -0.05
+ball.dy = -0.05
 
 # CReate the scoreboard object class to use the methods
 score_board = turtle.Turtle()
@@ -99,3 +99,22 @@ while playing:
     elif ball.ycor() <-290:
         ball.sety(-290)
         ball.dy = ball.dy * -1
+
+    # Check Feft and Right Borders
+    if ball.xcor() > 390:
+        score_a = score_a + 1
+        score_board.clear()
+        score_board.write("Player A: {} Player B: {}".format(score_a, score_b), align="center",
+                  font=("Courier", 24, "normal"))
+    elif ball.xcor() < -390:
+        score_b = score_b+ 1
+        score_board.clear()
+        score_board.write("Player A: {} Player B: {}".format(score_a, score_b), align="center",
+                  font=("Courier", 24, "normal"))
+        
+    # Paddle and Ball Collision
+    if ball.xcor () < -340 and ball.ycor() < paddle_a.ycor() + 50 and ball.ycor () > paddle_a.ycor () -50:
+        ball.dx = ball.dx * - 1
+    elif ball.xcor () < 340 and ball.ycor() < paddle_b.ycor() + 50 and ball.ycor () > paddle_b.ycor () -50:
+        ball.dx = ball.dx * - 1
+
