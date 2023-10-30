@@ -37,12 +37,11 @@ ball.shape("circle")
 ball.color("yellow")
 ball.penup()
 ball.goto(0,0)
-
 # Define the ball movement
 ball.dx = -0.05
 ball.dy = -0.05
 
-# CReate the scoreboard object class to use the methods
+# Create the scoreboard object class to use the methods
 score_board = turtle.Turtle()
 # Methods
 score_board.speed(0)
@@ -57,25 +56,25 @@ score_board.write("Player A: {} Player B: {}".format(score_a, score_b), align="c
 # Define a function to move the paddle up 
 def paddle_a_up():
     y = paddle_a.ycor()
-    y = y + 20
+    y += 20
     paddle_a.sety(y)
 
 # Define a function to move the paddle down 
 def paddle_a_down():
     y = paddle_a.ycor()
-    y = y - 20
+    y -= 20
     paddle_a.sety(y)
 
 # Define a function to move the paddle up 
 def paddle_b_up():
     y = paddle_b.ycor()
-    y = y + 20
+    y += 20
     paddle_b.sety(y)
 
 # Define a function to move the paddle down 
 def paddle_b_down():
     y = paddle_b.ycor()
-    y = y - 20
+    y -= 20
     paddle_b.sety(y)
 
 # Keyboard binding
@@ -95,25 +94,27 @@ while playing:
     # Check Top and Bottom Borders
     if ball.ycor() > 290:
         ball.sety(290)
-        ball.dy = ball.dy * -1
+        ball.dy *= -1
     elif ball.ycor() <-290:
         ball.sety(-290)
-        ball.dy = ball.dy * -1
+        ball.dy *= -1
 
-    # Check Feft and Right Borders
+    # Check Left and Right Borders
     if ball.xcor() > 390:
-        score_a = score_a + 1
+        score_a += 1
         score_board.clear()
         score_board.write("Player A: {} Player B: {}".format(score_a, score_b), align="center",
                   font=("Courier", 24, "normal"))
         ball.goto(0,0)
     elif ball.xcor() < -390:
-        score_b = score_b+ 1
+        score_b += 1
         score_board.clear()
         score_board.write("Player A: {} Player B: {}".format(score_a, score_b), align="center",
                   font=("Courier", 24, "normal"))
+        ball.goto(0,0)
+        
     # Paddle and Ball Collision
     if ball.xcor() < -340 and ball.ycor() < paddle_a.ycor() + 50 and ball.ycor() > paddle_a.ycor() -50:
-        ball.dx = ball.dx * - 1
+        ball.dx *= -1
     elif ball.xcor() < 340 and ball.ycor() < paddle_b.ycor() + 50 and ball.ycor() > paddle_b.ycor() -50:
-        ball.dx = ball.dx * - 1
+        ball.dx *= -1
