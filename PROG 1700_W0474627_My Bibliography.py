@@ -4,6 +4,7 @@ info = {
     'hometown': 'Lipa City',
     'favfood': 'burger',
     'bestsport': 'tennis'
+    'topbands': {'genre': {'alternative': 'lifehouse','Switchfoot', 'One Republic', 'Muse', 'Nightly', 'Coldplay'}}, 'rock'}
 }
 
 print(info)
