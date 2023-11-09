@@ -31,7 +31,7 @@ while True:
             print(f'{key}: {value}')
         print('\n')
         break
-    # Otherwise  outputs a message "Student name Not Found!"
+    # Otherwise outputs a message "Student name Not Found!"
     else:
         print ("Your name is found in the file system!")
         for key, value in student_score.items():
@@ -39,10 +39,3 @@ while True:
         print('\n')
         print ("You've been successfully added in the file system!")
         break
-        
-    
-
-
-# If they do, print their name and score
-
-# otherwise, print a message indicating that the student is not found.
