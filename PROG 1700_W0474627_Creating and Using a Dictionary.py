@@ -21,10 +21,14 @@ print('\n')
 
 
 # Check if the student exists in the dictionary
-if student_name in student_score:
-    print (value)
-else:
-    print ("Not Found")
+# Student name is in the list, print name ans score
+while True:
+    if student_name in student_score:
+        print ("Found")
+    # Otherwise  outputs a message "Student name Not Found!"
+    else:
+        print ("Student name Not Found!")
+    
 
 
 # If they do, print their name and score
