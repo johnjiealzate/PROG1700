@@ -18,8 +18,6 @@ print('\n')
 
 # Calculate and print the average test score of all the students in the 'student_scores' dictionary.
 
-
-
 # Check if the student exists in the dictionary
 # Student name is in the list, print name ans score
 while True:
@@ -37,5 +35,5 @@ while True:
         for key, value in student_score.items():
             print(f'{key}: {value}')
         print('\n')
-        print ("You've been successfully added in the file system!")
+        print ("You've been successfully added in the file system! ")
         break
