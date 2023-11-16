@@ -42,3 +42,20 @@ print("Count of the number 5 in the list:", count_of_5)
 # Gets the index of the number 5 in the list 
 index_of_3 = my_list.index(5) 
 print("Index of the number 5 in the list:", index_of_3)
+
+# Iterating through lists
+print("Greetings to the Students:")
+student_names = ['Alice', 'Bob', 'Eve', 'John']
+for student in student_names: 
+    print(f"Hello, {student}!") 
+
+# Count the  number of students
+count_names = len (student_names)
+print (count_names)
+
+# Other counting methods
+count = 0
+for student in student_names:
+    count += 1
+    print (f"Hello, {student}!")
+    print (count)
