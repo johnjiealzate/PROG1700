@@ -1,3 +1,13 @@
+"""
+Auhor: Johnjie Alzate
+Student ID: W0474627
+Course: IT Generalist
+Programming Language: Python
+Date: 11-16-23
+Version: 3
+"""
+
+
 # Import random function
 import random
 
