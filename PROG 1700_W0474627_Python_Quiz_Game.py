@@ -29,7 +29,7 @@ for language, difficulty_levels in quiz_data:
         print ("You're correct!")
         score += 1
     else:
-        print (f"You're incorrrect! the difficulty level of {language} is {difficulty_levels}.")
+        print (f"You're incorrect! the difficulty level of {language} is {difficulty_levels}.")
 print (f"Quiz Complete! Your final score is {score}.")
 
 
