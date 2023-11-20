@@ -1,12 +1,11 @@
-# Create a empty dictionary called 'student_scores'
-student_scores = {}
-
-# Add student names and their test scores in the dictionary
-student_scores ['Alice'] = 90
-student_scores ['Bob'] = 85
-student_scores ['Charlie'] = 78
-student_scores ['David'] = 92
-student_scores ['Eve'] = 88
+# Create a dictionary called 'student_scores'
+student_scores = {
+    "Alice": 90,
+    "Bob": 85,
+    "Charlie": 78,
+    "David": 92,
+    "Eve": 88
+}
 
 # Output/print the initial 'student_score' dictionary to display the student names and their scores
 for key, value in student_scores.items():
