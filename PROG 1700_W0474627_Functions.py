@@ -11,5 +11,4 @@ great_user("John")
 def multiply (a, b):
     return a*b
 
-print(multiply(5, 6))
-    
+print(f"My agae is {multiply(6, 4)}!")
