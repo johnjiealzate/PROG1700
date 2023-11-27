@@ -79,9 +79,17 @@ for student, grades in student_information.items():
     print(f"{student}'s average grade: {average_grade}.")
 
 # Functions: Functions Basics: Write a function that takes two arguments and returns their sum.
-def my_function(name,  surname):
-    print(name + " " + "surname")
-my_function("Johnjie")
+def my_function(name, surname):
+    print(name + surname)
+my_function("Johnjie", "Alzate")
+
+# Default Values: Modify the previous function to have default values for the arguments.
+def phil_cities (city = "Pasig"):
+    print("One of the Philippine cities is " + city)
+
+phil_cities()
+phil_cities("Manila")
+phil_cities("Taguig")
 
 
 
