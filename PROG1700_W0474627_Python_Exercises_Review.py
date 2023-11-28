@@ -66,7 +66,6 @@ student_information = {
     },
     "Student_2": {
         "Math": 88,
-        "English": 95
     },
     "Student_3": {
         "Math": 99,
