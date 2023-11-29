@@ -10,8 +10,9 @@ Version: 3
 # Create empty dictionary
 customers = {}
 
-# Initial customer ID from an empty customers distionary
+# Initial customer/order ID from an empty customers distionary
 customer_id = 0
+order_id = 0
 
 # Menu
 while True:
@@ -19,7 +20,7 @@ while True:
         "1. Add Customer\n",
         "2. Place Order\n",
         "3. Generate Customer Report\n",
-        "4. Generate aAll Customer Report\n",
+        "4. Generate All Customer Report\n",
         "5. Exit\n", 
         "\n",
         )
@@ -45,16 +46,49 @@ while True:
         product_name = input("Enter product name: ")
         quantity = int(input("Enter quantity: "))
         unit_price = float(input("Enter the unit price:"))
-        def place_order(customer_id, product_name, quantiy, unit_price):
+        def place_order(customer_id, product_name, quantity, unit_price):
             global customers
-            order_id = len(customers[customer_id]["Orders"]) + 1
-            total_cost = quantiy * unit_price
-            order = {"order_id": order_id, "product_name": product_name, "quantity": quantiy, "total_cost": total_cost}
+            global order_id
+            order_id = order_id + 1
+            total_cost = quantity * unit_price
+            order = {"order_id": order_id, "product_name": product_name, "quantity": quantity, "total_cost": total_cost}
             customers[customer_id]["orders"].append(order)
             print("Order placed successfully!")
             print(customers)
         place_order(customer_id, product_name, quantity, unit_price)
-        
-            
-    # Add new customer menu #1       
-    '''elif menu_choice == 2:'''
+    
+    # Generate customer report Menu#3
+    elif menu_choice == 3:
+        customer_id = int(input("Enter customer ID: "))
+        def generate_customer_report(customer_id):
+            global customers
+            customer_name = customers.get(customer_id)
+            if customer_name:
+                print(f"\nCustomer Report for {customer_name['name']}:")
+                print(f"Contact: {customer_name['contact']}")
+                for order in customer_name["orders"]:
+                    total_spending = order["total_cost"]
+                
+                print(f"Total spending: ${total_spending: 2f}")
+                print("Orders:")
+                for order in customer_name['orders']:
+                    print(f" Order ID: {order['order_id']} | Product: {order['product_name']} | Quantity: {order['quantity']}")
+            else:
+                print("Customer not found.")
+        generate_customer_report(customer_id)
+                
+    # Generate all customer report Menu4
+    elif menu_choice == 4:
+        def generate_all_reports():
+            global customers
+            for customer_id, _ in customers.items():
+                print(generate_customer_report(customer_id))
+        generate_all_reports()
+    
+    # Exit Menu5
+    elif menu_choice == 5:
+        print("Thank you for using the Order and Customer Management System (OCMS).")
+        break
+    
+    else:
+        print("Invalid choice. Please enter a valid number between 1 and 5.")
