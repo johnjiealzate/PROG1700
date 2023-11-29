@@ -21,6 +21,7 @@ while True:
         "2. Place Order\n",
         "3. Generate Customer Report\n",
         "4. Generate All Customer Report\n",
+        "4. Generate All Customer Report\n",
         "5. Exit\n", 
         "\n",
         )
@@ -68,7 +69,6 @@ while True:
                 print(f"Contact: {customer_name['contact']}")
                 for order in customer_name["orders"]:
                     total_spending = order["total_cost"]
-                
                 print(f"Total spending: ${total_spending: 2f}")
                 print("Orders:")
                 for order in customer_name['orders']:
