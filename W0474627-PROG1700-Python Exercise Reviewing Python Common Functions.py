@@ -27,7 +27,7 @@ print(result)
 # Loops: Factorial - Write a function to calculate the factorial of a number using a while loop.
 import math
 print(math.factorial(9))
-
+''' Other factorial methods
 def factorial(num1):
     result = 1
     while num > 0:
@@ -35,6 +35,7 @@ def factorial(num1):
         num1 =  num1 - 1
     return result
 print(factorial(9))
+'''
 
 # Sets: Intersection - Create two sets, set1 and set2, and find and print their intersection.
 set1 = {1, 2, 3, 4, 5}
@@ -101,13 +102,10 @@ phil_cities("Manila")
 phil_cities("Taguig")
 
 # File Reasing: Read a text file named 'sample.txt' and print its contents line by line.
-f = open("sample.txt", "r")
-print(f.read())
+file = open("sample.txt", "r")
+print(file.read())
 
 # File Writing: Write a list of strings to a new text file named 'output.txt'.
-f = open("output.txt", "w")
-f.write("This is a sample written string.")
-f.close()
-
-
-
+file = open("output.txt", "w")
+file.write("This is a sample written string.")
+file.close()
