@@ -114,7 +114,7 @@ phil_cities()
 phil_cities("Manila")
 phil_cities("Taguig")
 
-# File Reasing: Read a text file named 'sample.txt' and print its contents line by line.
+# File Reading: Read a text file named 'sample.txt' and print its contents line by line.
 file = open("sample.txt", "r")
 print(file.read())
 
