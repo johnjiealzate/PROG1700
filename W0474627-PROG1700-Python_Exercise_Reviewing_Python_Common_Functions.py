@@ -46,7 +46,20 @@ print(intersection_set)
 # List: List Operation - Create a list of numbers. Perform the following operations and print the result
 list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print (sum(list1) / len(list1))
+# Other method to get the average
+total = 0
+count = 0
+average = 0
+for t in list1:
+    total += 1
+    count += 1
+average = total / count
+print (average)
+
+# Get the mnaximum
 print (max(list1))
+
+# Get the minimum
 print (min(list1))
 
 # List comprehention - Generate a list of squares of numbers from 1 to 10 using list comprehension.
