@@ -75,7 +75,7 @@ print (name1, name2, name3)
 
 # Disctionaries - DIctionary Operations: Create a dictionary representing a person with keys like 'name', 'age', and 'city'. Print each key-value pair.
 person = {
-    "name" : "John",
+    "name" : "john",
     "Age": 25,
     "City": "Manila"
 }
