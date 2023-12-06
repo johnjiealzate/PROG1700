@@ -124,11 +124,9 @@ file.write("This is a sample written string.")
 file.close()
 
 # Exception handling
-'''
 try:
-    with open("output.txt" "w") as file:
+    with open("output.txt" "r") as file:
         for line in file:
             file.write(line + "\n")
 except IOError:
     print ("An error occurred while writing to the file.")
-'''
