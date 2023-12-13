@@ -34,9 +34,9 @@ while chicken_in_box > 0:
                     break      
                 days_counter2 += 1
                 increase_in_eaten_chicken += 0.05
-                remaining_chicken -= 1.05
+                remaining_chicken = remaining_chicken - increase_in_eaten_chicken
               
         break
     days_counter1 += 1
     increase_in_eaten_chicken += 0.05
-    remaining_chicken -= 1.05
+    remaining_chicken = remaining_chicken - increase_in_eaten_chicken
