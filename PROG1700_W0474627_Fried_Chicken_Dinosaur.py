@@ -13,6 +13,7 @@ while chicken_in_box > 0:
     # Output the chicken eaten per day and the remaining chicken in the box
     print ("Fried chicken eaten on day", round(days_counter1, 2), "=", round(increase_in_eaten_chicken, 2))
     print ("Fried chicken remaining: =", round(remaining_chicken, 2))
+    print("\n")
     # Continue the loop until days 6 
     if days_counter1 == 6:
         while True:
@@ -20,6 +21,7 @@ while chicken_in_box > 0:
             if days_counter2 == 7:
                 print ("Fried chicken eaten on day", round(days_counter2, 2), "=", round(chicken_eaten_when_ill, 2))
                 print ("Fried chicken remaining: =", round((remaining_chicken - chicken_eaten_when_ill), 2))
+                print("\n")
                 if days_counter2 == 14:
                     break
                 days_counter2 += 1
@@ -28,6 +30,7 @@ while chicken_in_box > 0:
             else:
                 print ("Fried chicken eaten on day", round(days_counter2, 2), "=", round(increase_in_eaten_chicken, 2))
                 print ("Fried chicken remaining: =", round((remaining_chicken - chicken_eaten_when_ill), 2))
+                print("\n")
                 if remaining_chicken <= 0:
                     print("The number of days it took to run out of chicken is", days_counter2, "days.")
                     
